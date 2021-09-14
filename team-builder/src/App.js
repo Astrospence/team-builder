@@ -3,12 +3,30 @@ import './App.css';
 import React, { useState } from 'react';
 import Form from './Form';
 
-function App() {
+const initialFormValues = {
+  username: '',
+  email: '',
+  role: ''
+}
 
-  const [teamMembers, setTeamMembers] = useState();
+function App() {
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [formValues, setFormValues] = useState(initialFormValues);
+
+  const updateForm = () => {
+
+  }
+  const submitForm = () => {
+
+  }
+
   return (
     <div className="App">
-      
+      <Form 
+        update={updateForm}
+        submit={submitForm}
+        values={formValues}
+        />
     </div>
   );
 }
